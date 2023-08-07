@@ -6,10 +6,25 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-react-pug": "^7.0.1",
+    "bootstrap": "^5.3.1",
+    "eslint": "^8.46.0",
+    "eslint-plugin-react-pug": "^0.8.4",
+    "pug-as-jsx-loader": "^1.0.88",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.0"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "transform-react-pug",
+      "transform-react-jsx"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -18,9 +33,12 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "plugins": [
+      "react-pug"
+    ],
     "extends": [
       "react-app",
-      "react-app/jest"
+      "plugin:react-pug/all"
     ]
   },
   "browserslist": {
@@ -34,5 +52,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
